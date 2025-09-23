@@ -1,0 +1,20 @@
+{
+  "HomePage": {
+    "title": "El Hub de Daniel",
+    "subtitle": "Un desarrollador apasionado mostrando proyectos y experimentos.",
+    "projectsTitle": "Proyectos",
+    "footerText": "© {year} Dahii.es. Todos los derechos reservados."
+  },
+  "Projects": {
+    "chatApp": {
+      "title": "App de Chat Estilo Discord",
+      "description": "Una aplicación de chat en tiempo real construida con Next.js, con servidores, canales y mensajería directa.",
+      "tag": "Aplicación Full-Stack"
+    },
+    "pokemonDb": {
+      "title": "Base de Datos Pokémon",
+      "description": "Una interfaz de base de datos para explorar Pokémon, construida para demostrar la integración de API y habilidades de frontend.",
+      "tag": "Proyecto Frontend"
+    }
+  }
+}

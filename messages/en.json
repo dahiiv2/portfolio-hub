@@ -1,0 +1,20 @@
+{
+  "HomePage": {
+    "title": "Daniel's Hub",
+    "subtitle": "A passionate developer showcasing projects and experiments.",
+    "projectsTitle": "Projects",
+    "footerText": "© {year} Dahii.es. All Rights Reserved."
+  },
+  "Projects": {
+    "chatApp": {
+      "title": "Discord-Style Chat App",
+      "description": "A real-time chat application built with Next.js, featuring servers, channels, and direct messaging.",
+      "tag": "Full-Stack Application"
+    },
+    "pokemonDb": {
+      "title": "Pokemon DB",
+      "description": "A database interface for exploring Pokemon, built to showcase API integration and frontend skills.",
+      "tag": "Frontend Project"
+    }
+  }
+}
