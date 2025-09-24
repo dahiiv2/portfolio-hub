@@ -52,7 +52,7 @@ export default function Home() {
             className="text-5xl sm:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-amber-500"
             variants={itemVariants}
           >
-            Daniel's Portfolio
+            Daniel&apos;s Portfolio
           </motion.h1>
           <motion.p
             className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-300"
