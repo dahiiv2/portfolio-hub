@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dahii's Hub - Developer Portfolio",
+  title: "Dahii's Portfolio",
   description: "A collection of projects by Daniel Mellera",
 };
 
