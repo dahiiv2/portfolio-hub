@@ -14,7 +14,7 @@ const projects = [
   {
     title: 'Pokemon DB',
     description: 'A database interface for exploring Pokemon, built to showcase API integration and frontend skills.',
-    href: '#', // Replace with actual link when available
+    href: 'https://dahiipokemon.netlify.app/pokemons',
     tag: 'Frontend Project',
   },
 ];
