@@ -3,35 +3,26 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import ProjectCard from '@/components/ProjectCard';
+import { useTranslations } from 'next-intl';
 
 const projects = [
-  {
-    title: 'Discord-Style Chat App',
-    description: 'A real-time chat application built with Next.js, featuring servers, channels, and direct messaging.',
-    href: 'https://chat.dahii.es',
-    tag: 'Full-Stack Application',
-  },
-  {
-    title: 'Pokemon DB',
-    description: 'A database interface for exploring Pokemon, built to showcase API integration and frontend skills.',
-    href: 'https://dahiipokemon.netlify.app/pokemons',
-    tag: 'Frontend Project',
-  },
-];
+  { key: 'chatApp', href: 'https://chat.dahii.es' },
+  { key: 'pokemonDb', href: 'https://dahiipokemon.netlify.app/pokemons' },
+] as const;
 
 export default function Home() {
+  const tHome = useTranslations('HomePage');
+  const tProj = useTranslations('Projects');
+
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
-    },
-  };
+    visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.3 } },
+  } as const;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
+  } as const;
 
   return (
     <div className="relative flex flex-col min-h-screen bg-gray-900 text-white overflow-x-hidden">
@@ -43,7 +34,7 @@ export default function Home() {
 
       <main className="relative z-10 flex-grow container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.section
-          className="text-center py-24 sm:py-32"
+          className="pt-16 pb-12 sm:pt-20 sm:pb-16 text-center"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
@@ -52,30 +43,37 @@ export default function Home() {
             className="text-5xl sm:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-amber-500"
             variants={itemVariants}
           >
-            Daniel&apos;s Portfolio
+            {tHome('title')}
           </motion.h1>
+
           <motion.p
-            className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-300"
+            className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-300 text-center"
             variants={itemVariants}
           >
-            A passionate developer showcasing projects and experiments.
+            {tHome('subtitle')}
           </motion.p>
         </motion.section>
 
         <motion.section
           id="projects"
-          className="py-16"
+          className="py-12 sm:py-16"
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          animate="visible"
           variants={containerVariants}
         >
           <motion.h2 className="text-4xl sm:text-5xl font-bold text-center mb-16" variants={itemVariants}>
-            Projects
+            {tHome('projectsTitle')}
           </motion.h2>
+
           <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
-            {projects.map((project) => (
-              <ProjectCard key={project.title} {...project} />
+            {projects.map((p) => (
+              <ProjectCard
+                key={p.key}
+                title={tProj(`${p.key}.title`)}
+                description={tProj(`${p.key}.description`)}
+                tag={tProj(`${p.key}.tag`)}
+                href={p.href}
+              />
             ))}
           </div>
         </motion.section>
@@ -84,14 +82,24 @@ export default function Home() {
       <footer className="relative z-10 bg-gray-900/50 border-t border-gray-800 py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
           <div className="flex justify-center space-x-6 mb-4">
-            <a href="https://github.com/dahiiv2" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-amber-400 transition-colors duration-300">
+            <a
+              href="https://github.com/dahiiv2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-amber-400 transition-colors duration-300"
+            >
               <FaGithub size={28} />
             </a>
-            <a href="https://www.linkedin.com/in/daniel-mellera-29a037380" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-amber-400 transition-colors duration-300">
+            <a
+              href="https://www.linkedin.com/in/daniel-mellera-29a037380"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-amber-400 transition-colors duration-300"
+            >
               <FaLinkedin size={28} />
             </a>
           </div>
-          <p>&copy; {new Date().getFullYear()} dahii.es. All Rights Reserved.</p>
+          <p>{tHome('footerText', { year: new Date().getFullYear() })}</p>
         </div>
       </footer>
     </div>
