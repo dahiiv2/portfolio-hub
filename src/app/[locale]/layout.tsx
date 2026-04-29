@@ -40,7 +40,7 @@ export default async function RootLayout({ children, params }: Props) {
   }
 
   // Load messages for the current locale
-  let messages: any;
+  let messages: Record<string, unknown>;
   try {
     messages = (await import(`../../messages/${locale}.json`)).default;
   } catch {

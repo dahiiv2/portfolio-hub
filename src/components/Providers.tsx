@@ -5,7 +5,7 @@ import { ReactNode } from 'react';
 
 type Props = {
   locale: string;
-  messages: any;
+  messages: Record<string, unknown>;
   children: ReactNode;
 };
 
