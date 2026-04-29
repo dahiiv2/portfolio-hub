@@ -5,16 +5,34 @@
     "projectsTitle": "Projects",
     "footerText": "© {year} Dahii.es. All Rights Reserved."
   },
+  "Modal": {
+    "gamesLabel": "Minigames",
+    "featuresLabel": "Key Features",
+    "techStackLabel": "Tech Stack",
+    "viewOnGitHub": "View on GitHub"
+  },
   "Projects": {
-    "chatApp": {
-      "title": "Discord-Style Chat App",
-      "description": "A real-time chat application built with Next.js, featuring servers, channels, and direct messaging.",
-      "tag": "Full-Stack Application"
-    },
-    "pokemonDb": {
-      "title": "Pokemon DB",
-      "description": "A database interface for exploring Pokemon, built to showcase API integration and frontend skills.",
-      "tag": "Frontend Project"
+    "jumpCat": {
+      "title": "JumpCat",
+      "tag": "Minecraft Plugin",
+      "shortDescription": "A self-contained Paper API plugin with four competitive minigames, team management, and persistent stats — zero external dependencies.",
+      "description": "A comprehensive Minecraft minigames plugin built on Paper API 1.21, designed to run as a single self-contained plugin. No external database or addon dependencies — everything needed for a competitive multiplayer server in one package.",
+      "features": [
+        "Twelve color-coded teams with friendly-fire disabled and team-chat toggle",
+        "Persistent points economy with paginated leaderboards and per-player tracking",
+        "Sidebar HUD displaying kills, deaths, rank, and team status",
+        "Floating text-display leaderboard signs for player or team rankings",
+        "Dynamic MOTD reflecting the current game state",
+        "Automatic world cloning from templates with post-game cleanup",
+        "Particle-wall border with configurable damage-per-second that shrinks over time",
+        "In-memory moderation tools (ban, mute, kick with optional duration support)"
+      ],
+      "games": [
+        { "name": "Battle Box", "description": "Round-robin tournament arena combat" },
+        { "name": "SkyWars", "description": "Sky island elimination with shrinking borders" },
+        { "name": "UHC Meetup", "description": "Resource-gathering survival with border compression" },
+        { "name": "TNT Run", "description": "Platform collapse mechanics" }
+      ]
     }
   }
 }

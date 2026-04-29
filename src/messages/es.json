@@ -5,16 +5,34 @@
     "projectsTitle": "Proyectos",
     "footerText": "© {year} Dahii.es. Todos los derechos reservados."
   },
+  "Modal": {
+    "gamesLabel": "Minijuegos",
+    "featuresLabel": "Características Clave",
+    "techStackLabel": "Tecnologías",
+    "viewOnGitHub": "Ver en GitHub"
+  },
   "Projects": {
-    "chatApp": {
-      "title": "App de Chat Estilo Discord",
-      "description": "Una aplicación de chat en tiempo real construida con Next.js, con servidores, canales y mensajería directa.",
-      "tag": "Aplicación Full-Stack"
-    },
-    "pokemonDb": {
-      "title": "Base de Datos Pokémon",
-      "description": "Una interfaz de base de datos para explorar Pokémon, construida para demostrar la integración de API y habilidades de frontend.",
-      "tag": "Proyecto Frontend"
+    "jumpCat": {
+      "title": "JumpCat",
+      "tag": "Plugin de Minecraft",
+      "shortDescription": "Un plugin para Paper API completamente autónomo con cuatro minijuegos competitivos, gestión de equipos y estadísticas persistentes — sin dependencias externas.",
+      "description": "Un completo plugin de minijuegos para Minecraft construido sobre Paper API 1.21, diseñado para funcionar como un único plugin autónomo. Sin bases de datos externas ni addons — todo lo necesario para un servidor multijugador competitivo en un solo paquete.",
+      "features": [
+        "Doce equipos con código de colores, fuego amigo desactivado y chat de equipo opcional",
+        "Economía de puntos persistente con clasificaciones paginadas y seguimiento por jugador",
+        "HUD lateral con estadísticas de kills, muertes, rango y estado del equipo",
+        "Letreros flotantes de clasificación para jugadores o equipos",
+        "MOTD dinámico que refleja el estado actual de la partida",
+        "Clonación automática de mundos desde plantillas con limpieza tras la partida",
+        "Barrera de partículas con daño por segundo configurable que se reduce con el tiempo",
+        "Herramientas de moderación en memoria (ban, mute, kick con duración opcional)"
+      ],
+      "games": [
+        { "name": "Battle Box", "description": "Combate de arena en torneo round-robin" },
+        { "name": "SkyWars", "description": "Eliminación en islas flotantes con fronteras que se reducen" },
+        { "name": "UHC Meetup", "description": "Supervivencia con recolección de recursos y compresión de frontera" },
+        { "name": "TNT Run", "description": "Mecánica de colapso de plataformas" }
+      ]
     }
   }
 }

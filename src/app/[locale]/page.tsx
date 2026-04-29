@@ -1,18 +1,29 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import ProjectCard from '@/components/ProjectCard';
+import ProjectModal from '@/components/ProjectModal';
 import { useTranslations } from 'next-intl';
 
-const projects = [
-  { key: 'chatApp', href: 'https://chat.dahii.es' },
-  { key: 'pokemonDb', href: 'https://dahiipokemon.netlify.app/pokemons' },
-] as const;
+type LinkProject = { type: 'link'; key: string; href: string };
+type ModalProject = { type: 'modal'; key: string; github: string; techStack: string[] };
+type Project = LinkProject | ModalProject;
+
+const projects: Project[] = [
+  {
+    type: 'modal',
+    key: 'jumpCat',
+    github: 'https://github.com/dahiiv2/JumpCat',
+    techStack: ['Java 21', 'Paper API 1.21', 'Kyori Adventure', 'MiniMessage', 'Gradle (Kotlin DSL)', 'YAML'],
+  },
+];
 
 export default function Home() {
   const tHome = useTranslations('HomePage');
   const tProj = useTranslations('Projects');
+  const [openModal, setOpenModal] = useState<string | null>(null);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -65,15 +76,31 @@ export default function Home() {
             {tHome('projectsTitle')}
           </motion.h2>
 
-          <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
             {projects.map((p) => (
-              <ProjectCard
-                key={p.key}
-                title={tProj(`${p.key}.title`)}
-                description={tProj(`${p.key}.description`)}
-                tag={tProj(`${p.key}.tag`)}
-                href={p.href}
-              />
+              <div key={p.key} className="w-full max-w-sm">
+                <ProjectCard
+                  title={tProj(`${p.key}.title`)}
+                  description={tProj(`${p.key}.shortDescription`)}
+                  tag={tProj(`${p.key}.tag`)}
+                  {...(p.type === 'link'
+                    ? { href: p.href }
+                    : { onClick: () => setOpenModal(p.key) })}
+                />
+                {p.type === 'modal' && (
+                  <ProjectModal
+                    isOpen={openModal === p.key}
+                    onClose={() => setOpenModal(null)}
+                    title={tProj(`${p.key}.title`)}
+                    tag={tProj(`${p.key}.tag`)}
+                    description={tProj(`${p.key}.description`)}
+                    features={(tProj.raw(`${p.key}.features`) as string[]) ?? []}
+                    games={(tProj.raw(`${p.key}.games`) as Array<{ name: string; description: string }>) ?? []}
+                    techStack={p.techStack}
+                    github={p.github}
+                  />
+                )}
+              </div>
             ))}
           </div>
         </motion.section>
