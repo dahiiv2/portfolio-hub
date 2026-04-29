@@ -67,15 +67,6 @@ public boolean teamEliminated(char team) {
   },
 ];
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 10 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.45, delay: i * 0.07, ease: 'easeOut' as const },
-  }),
-};
-
 export default function Home() {
   const tHome = useTranslations('HomePage');
   const tProj = useTranslations('Projects');
@@ -84,39 +75,89 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-stone-900">
       <main className="flex-grow w-full">
-        <div className="max-w-2xl mx-auto px-6">
 
-          {/* Hero */}
-          <section className="pt-32 pb-20 text-center">
-            <motion.p
-              className="text-[11px] uppercase tracking-[0.3em] text-amber-700 font-semibold mb-8"
-              initial="hidden" animate="visible" custom={0} variants={fadeUp}
-            >
-              Portfolio
-            </motion.p>
-            <motion.h1
-              className="text-5xl sm:text-6xl font-bold text-stone-900 tracking-tight"
-              initial="hidden" animate="visible" custom={1} variants={fadeUp}
-            >
-              {tHome('title')}
-            </motion.h1>
+        {/* ── Hero ── */}
+        <section className="min-h-screen flex items-center px-6 md:px-12 lg:px-20 py-24">
+          <div className="max-w-5xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+
+            {/* Photo — left on desktop, below text on mobile */}
             <motion.div
-              className="mt-6 mx-auto w-8 h-px bg-amber-700/40"
-              initial="hidden" animate="visible" custom={2} variants={fadeUp}
-            />
-            <motion.p
-              className="mt-5 text-stone-500 text-base sm:text-lg max-w-sm mx-auto leading-relaxed"
-              initial="hidden" animate="visible" custom={3} variants={fadeUp}
+              className="relative order-2 md:order-1"
+              initial={{ opacity: 0, x: -16 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' as const }}
             >
-              {tHome('subtitle')}
-            </motion.p>
-          </section>
+              {/* Graphic circles */}
+              <div className="absolute -top-14 -left-14 w-72 h-72 rounded-full border border-stone-200 pointer-events-none" />
+              <div className="absolute -bottom-10 -right-10 w-48 h-48 rounded-full border border-stone-100 pointer-events-none" />
 
-          {/* Projects */}
-          <section className="pb-28">
+              {/* Photo placeholder */}
+              <div className="relative aspect-[3/4] rounded-2xl bg-stone-100 overflow-hidden flex flex-col items-center justify-center">
+                <span className="text-7xl font-black text-stone-300 tracking-tighter select-none">DM</span>
+                <span className="mt-3 text-[10px] uppercase tracking-[0.25em] text-stone-400 select-none">Photo</span>
+              </div>
+            </motion.div>
+
+            {/* Text — right on desktop, top on mobile */}
+            <div className="order-1 md:order-2 flex flex-col">
+              <motion.p
+                className="text-[11px] uppercase tracking-[0.3em] text-amber-700 font-semibold mb-6"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.0, ease: 'easeOut' as const }}
+              >
+                Portfolio
+              </motion.p>
+
+              <motion.h1
+                className="text-6xl sm:text-7xl font-black text-stone-900 leading-[1.0] tracking-tight"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: 0.07, ease: 'easeOut' as const }}
+              >
+                {tHome('title').split(' ').map((word, i) => (
+                  <span key={i} className="block">{word}</span>
+                ))}
+              </motion.h1>
+
+              <motion.p
+                className="mt-4 text-xs uppercase tracking-[0.22em] text-stone-400"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.14, ease: 'easeOut' as const }}
+              >
+                {tHome('role')}
+              </motion.p>
+
+              <motion.div
+                className="mt-7 w-8 h-px bg-amber-700/50"
+                initial={{ opacity: 0, scaleX: 0 }}
+                animate={{ opacity: 1, scaleX: 1 }}
+                transition={{ duration: 0.4, delay: 0.2, ease: 'easeOut' as const }}
+                style={{ transformOrigin: 'left' }}
+              />
+
+              <motion.p
+                className="mt-6 text-stone-500 text-base leading-relaxed max-w-xs"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: 0.26, ease: 'easeOut' as const }}
+              >
+                {tHome('subtitle')}
+              </motion.p>
+            </div>
+
+          </div>
+        </section>
+
+        {/* ── Projects ── */}
+        <section className="pb-28 px-6">
+          <div className="max-w-2xl mx-auto">
             <motion.p
               className="text-[11px] uppercase tracking-[0.3em] text-stone-400 font-semibold text-center mb-10"
-              initial="hidden" animate="visible" custom={4} variants={fadeUp}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.4, ease: 'easeOut' as const }}
             >
               {tHome('projectsTitle')}
             </motion.p>
@@ -149,13 +190,14 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-        </div>
       </main>
 
-      <footer className="border-t border-stone-100 py-8">
-        <div className="max-w-2xl mx-auto px-6 flex items-center justify-between text-stone-400 text-sm">
+      {/* ── Footer ── */}
+      <footer className="border-t border-stone-100 py-8 px-6">
+        <div className="max-w-5xl mx-auto flex items-center justify-between text-stone-400 text-sm">
           <span>{tHome('footerText', { year: new Date().getFullYear() })}</span>
           <div className="flex items-center gap-4">
             <a

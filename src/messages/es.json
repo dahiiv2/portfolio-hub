@@ -1,6 +1,7 @@
 {
   "HomePage": {
-    "title": "El Portfolio de Daniel",
+    "title": "Daniel Mellera",
+    "role": "Desarrollador de Software",
     "subtitle": "Un desarrollador apasionado mostrando proyectos y experimentos.",
     "projectsTitle": "Proyectos",
     "footerText": "© {year} Dahii.es. Todos los derechos reservados."
