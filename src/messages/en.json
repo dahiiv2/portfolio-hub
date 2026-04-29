@@ -9,7 +9,8 @@
     "gamesLabel": "Minigames",
     "featuresLabel": "Key Features",
     "techStackLabel": "Tech Stack",
-    "viewOnGitHub": "View on GitHub"
+    "viewOnGitHub": "View on GitHub",
+    "codeLabel": "Code Highlights"
   },
   "Projects": {
     "jumpCat": {

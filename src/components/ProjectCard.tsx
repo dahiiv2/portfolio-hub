@@ -12,8 +12,8 @@ interface ProjectCardProps {
 }
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, y: 12 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.45, ease: 'easeOut' } },
 };
 
 const CardInner = ({
@@ -22,18 +22,20 @@ const CardInner = ({
   description,
   isLink,
 }: Pick<ProjectCardProps, 'tag' | 'title' | 'description'> & { isLink: boolean }) => (
-  <div className="bg-gray-800/50 rounded-xl shadow-lg overflow-hidden border border-gray-700 h-full transition-all duration-300 group-hover:border-amber-500 group-hover:shadow-[0_0_24px_rgba(245,158,11,0.08)] group-hover:-translate-y-1">
-    <div className="p-6 flex flex-col h-full">
-      <div className="uppercase tracking-wide text-xs text-amber-400 font-semibold">{tag}</div>
-      <h3 className="mt-2 text-xl leading-tight font-bold text-white group-hover:text-amber-300 transition-colors duration-300">
-        {title}
-      </h3>
-      <p className="mt-2 text-gray-400 flex-grow text-sm leading-relaxed">{description}</p>
-      <div className="mt-4 flex justify-end">
-        <span className="text-amber-500/30 group-hover:text-amber-400 transition-all duration-300 group-hover:translate-x-0.5">
-          {isLink ? <FaExternalLinkAlt size={13} /> : <FaArrowRight size={13} />}
-        </span>
-      </div>
+  <div className="bg-white border border-stone-200 rounded-2xl p-6 h-full flex flex-col transition-all duration-200 group-hover:border-stone-300 group-hover:shadow-md">
+    <p className="text-[10px] uppercase tracking-[0.25em] text-amber-700 font-semibold">
+      {tag}
+    </p>
+    <h3 className="mt-3 text-xl font-bold text-stone-900 leading-snug transition-colors duration-200 group-hover:text-stone-700">
+      {title}
+    </h3>
+    <p className="mt-2 text-stone-500 text-sm leading-relaxed flex-grow">
+      {description}
+    </p>
+    <div className="mt-5 flex justify-end">
+      <span className="text-stone-300 group-hover:text-amber-700 transition-all duration-200 group-hover:translate-x-0.5">
+        {isLink ? <FaExternalLinkAlt size={12} /> : <FaArrowRight size={12} />}
+      </span>
     </div>
   </div>
 );
