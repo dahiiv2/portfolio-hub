@@ -25,7 +25,7 @@ export const locales = ["en", "es"] as const;
 
 type Props = Readonly<{
   children: React.ReactNode;
-  params: { locale: (typeof locales)[number] };
+  params: Promise<{ locale: (typeof locales)[number] }>;
 }>;
 
 export function generateStaticParams() {
@@ -33,7 +33,7 @@ export function generateStaticParams() {
 }
 
 export default async function RootLayout({ children, params }: Props) {
-  const { locale } = params;
+  const { locale } = await params;
 
   if (!locales.includes(locale)) {
     notFound();
