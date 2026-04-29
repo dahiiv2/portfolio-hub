@@ -25,7 +25,7 @@ export const locales = ["en", "es"] as const;
 
 type Props = Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: (typeof locales)[number] }>;
+  params: Promise<{ locale: string }>;
 }>;
 
 export function generateStaticParams() {
