@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 
 export const dynamic = "force-static";
 export const locales = ["en", "es"] as const;
+type Locale = (typeof locales)[number];
 
 type Props = Readonly<{
   children: React.ReactNode;
@@ -29,32 +30,32 @@ type Props = Readonly<{
 }>;
 
 export function generateStaticParams() {
-  return (locales as readonly string[]).map((locale) => ({ locale }));
+  return locales.map((locale) => ({ locale }));
 }
 
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
 
-  if (!locales.includes(locale)) {
+  if (!(locales as readonly string[]).includes(locale)) {
     notFound();
   }
 
-  // Load messages for the current locale
+  const typedLocale = locale as Locale;
+
   let messages: Record<string, unknown>;
   try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
+    messages = (await import(`../../messages/${typedLocale}.json`)).default;
   } catch {
     notFound();
   }
 
   return (
-    <html lang={locale}>
+    <html lang={typedLocale}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* Global language switcher in the top-right */}
         <div className="fixed top-4 right-4 z-50">
           <LanguageSwitcher />
         </div>
-        <Providers locale={locale} messages={messages}>{children}</Providers>
+        <Providers locale={typedLocale} messages={messages!}>{children}</Providers>
       </body>
     </html>
   );
