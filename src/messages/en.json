@@ -1,8 +1,10 @@
 {
   "HomePage": {
     "title": "Daniel Mellera",
-    "role": "Software Developer",
-    "subtitle": "A passionate developer showcasing projects and experiments.",
+    "role": "Full-Stack Developer",
+    "currently": "Junior Developer at EnergyGest España",
+    "subtitle": "Production experience with PHP, MySQL, React, and Vue. Building real systems for real users — currently in Spain, open to Switzerland.",
+    "languages": "EN · IT · ES",
     "projectsTitle": "Projects",
     "footerText": "© {year} Dahii.es. All Rights Reserved."
   },
@@ -16,6 +18,22 @@
     "liveDemo": "Live Demo"
   },
   "Projects": {
+    "psim": {
+      "title": "psim",
+      "tag": "Python · Battle Assistant",
+      "shortDescription": "A real-time Pokemon Showdown battle assistant — live damage calculations, opponent tracking, and a teambuilder, all from the terminal.",
+      "description": "A terminal-based Pokemon Showdown battle assistant that connects directly to PS via WebSocket and overlays live information during a battle. Damage calculations run through a Python-to-Node.js bridge that calls @smogon/calc — the same engine used by the official Smogon damage calculator. Built for competitive formats including Random Battles, VGC, and BSS.",
+      "features": [
+        "WebSocket client that connects to Pokemon Showdown and parses the PS protocol in real time",
+        "Cross-language damage calculation: Python spawns Node.js to run @smogon/calc, reverse-engineering EVs from PS-reported stats",
+        "Live HUD overlay showing damage ranges colour-coded by KO threat (OHKO, 2HKO, neutral)",
+        "Battle state tracker for field conditions — weather, terrain, Tailwind, screens, Tera type, and stat boosts",
+        "Opponent tracker logging seen moves, items, abilities, HP percentages, and status across turns",
+        "Teambuilder with full Smogon dex lookup for species, moves, items, and abilities",
+        "Player stats fetching from the PS public API (Elo, GXE, W/L)",
+        "Multi-format support: Random Battles (level-adjusted), VGC/BSS (Lv50), and standard formats"
+      ]
+    },
     "chatProject": {
       "title": "Chat Project",
       "tag": "Full-Stack Web App",

@@ -1,8 +1,10 @@
 {
   "HomePage": {
     "title": "Daniel Mellera",
-    "role": "Desarrollador de Software",
-    "subtitle": "Un desarrollador apasionado mostrando proyectos y experimentos.",
+    "role": "Desarrollador Full-Stack",
+    "currently": "Junior Developer en EnergyGest España",
+    "subtitle": "Experiencia en producción con PHP, MySQL, React y Vue. Construyendo sistemas reales para usuarios reales — actualmente en España, abierto a oportunidades en Suiza.",
+    "languages": "EN · IT · ES",
     "projectsTitle": "Proyectos",
     "footerText": "© {year} Dahii.es. Todos los derechos reservados."
   },
@@ -16,6 +18,22 @@
     "liveDemo": "Demo en Vivo"
   },
   "Projects": {
+    "psim": {
+      "title": "psim",
+      "tag": "Python · Asistente de Batalla",
+      "shortDescription": "Un asistente de batalla para Pokemon Showdown en tiempo real — cálculos de daño en vivo, seguimiento del rival y creador de equipos, todo desde la terminal.",
+      "description": "Un asistente de batalla para Pokemon Showdown basado en terminal que se conecta directamente a PS via WebSocket y muestra información en vivo durante la partida. Los cálculos de daño funcionan mediante un puente Python-Node.js que llama a @smogon/calc — el mismo motor del calculador oficial de Smogon. Diseñado para formatos competitivos como Random Battles, VGC y BSS.",
+      "features": [
+        "Cliente WebSocket que se conecta a Pokemon Showdown y parsea el protocolo PS en tiempo real",
+        "Cálculo de daño entre lenguajes: Python lanza Node.js para ejecutar @smogon/calc, calculando EVs a partir de las estadísticas reportadas por PS",
+        "HUD en vivo con rangos de daño codificados por color según amenaza de KO (OHKO, 2HKO, neutral)",
+        "Rastreador de estado de campo — tiempo, terreno, Tailwind, pantallas, tipo Tera y cambios de estadísticas",
+        "Rastreador del rival que registra movimientos vistos, objetos, habilidades, porcentajes de HP y estados a lo largo de los turnos",
+        "Creador de equipos con búsqueda completa en el dex de Smogon para especies, movimientos, objetos y habilidades",
+        "Obtención de estadísticas del jugador desde la API pública de PS (Elo, GXE, victorias/derrotas)",
+        "Soporte multi-formato: Random Battles (nivel ajustado), VGC/BSS (Nv50) y formatos estándar"
+      ]
+    },
     "chatProject": {
       "title": "Chat Project",
       "tag": "Aplicación Web Full-Stack",

@@ -24,6 +24,12 @@ type Project = LinkProject | ModalProject;
 const projects: Project[] = [
   {
     type: 'modal',
+    key: 'psim',
+    github: 'https://github.com/dahiiv2/psim',
+    techStack: ['Python', 'Node.js', 'aiohttp', 'WebSocket', '@smogon/calc', 'JSON'],
+  },
+  {
+    type: 'modal',
     key: 'chatProject',
     github: 'https://github.com/dahiiv2/Chat-Project',
     liveUrl: 'https://chat.dahii.es',
@@ -143,7 +149,8 @@ export default function Home() {
                 {tHome('role')}
               </motion.p>
 
-              <motion.div
+
+<motion.div
                 className="mt-7 w-8 h-px bg-amber-700/50"
                 initial={{ opacity: 0, scaleX: 0 }}
                 animate={{ opacity: 1, scaleX: 1 }}
@@ -193,7 +200,7 @@ export default function Home() {
 
         {/* ── Projects ── */}
         <section className="pb-28 px-6">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <motion.p
               className="text-[11px] uppercase tracking-[0.3em] text-stone-400 font-semibold text-center mb-10"
               initial={{ opacity: 0 }}
@@ -203,7 +210,7 @@ export default function Home() {
               {tHome('projectsTitle')}
             </motion.p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {projects.map((p) => (
                 <div key={p.key}>
                   <ProjectCard
