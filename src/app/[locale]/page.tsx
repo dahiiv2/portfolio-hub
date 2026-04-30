@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import ProjectCard from '@/components/ProjectCard';
@@ -91,10 +92,8 @@ export default function Home() {
               <div className="absolute -top-14 -left-14 w-72 h-72 rounded-full border border-stone-200 pointer-events-none" />
               <div className="absolute -bottom-10 -right-10 w-48 h-48 rounded-full border border-stone-100 pointer-events-none" />
 
-              {/* Photo placeholder */}
-              <div className="relative aspect-[3/4] rounded-2xl bg-stone-100 overflow-hidden flex flex-col items-center justify-center">
-                <span className="text-7xl font-black text-stone-300 tracking-tighter select-none">DM</span>
-                <span className="mt-3 text-[10px] uppercase tracking-[0.25em] text-stone-400 select-none">Photo</span>
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
+                <Image src="/photo.PNG" alt="Daniel Mellera" fill className="object-cover" priority />
               </div>
             </motion.div>
 
