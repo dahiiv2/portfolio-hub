@@ -14,6 +14,22 @@
     "codeLabel": "Fragmentos de Código"
   },
   "Projects": {
+    "chatProject": {
+      "title": "Chat Project",
+      "tag": "Aplicación Web Full-Stack",
+      "shortDescription": "Una plataforma de comunicación en equipo en tiempo real con canales de texto, audio y vídeo, control de acceso por roles y compartición de archivos.",
+      "description": "Una plataforma de comunicación en tiempo real full-stack desarrollada como proyecto final de Desarrollo Web. Soporta gestión jerárquica de servidores y canales con permisos por roles, mensajería directa, archivos adjuntos y llamadas de audio/vídeo en vivo, todo en una interfaz responsiva con modo claro y oscuro.",
+      "features": [
+        "Autenticación y gestión de sesiones mediante Clerk",
+        "Creación de servidores con enlaces de invitación y gestión de roles (Admin, Moderador, Invitado)",
+        "Canales de texto, audio y vídeo con mensajería en tiempo real mediante LiveKit",
+        "Mensajería directa y videollamadas entre miembros",
+        "Adjuntos de archivos e imágenes mediante UploadThing",
+        "Edición y eliminación de mensajes con actualizaciones en tiempo real",
+        "Scroll infinito con paginación por cursor para el historial de mensajes",
+        "Interfaz completamente responsiva con soporte para modo claro y oscuro"
+      ]
+    },
     "jumpCat": {
       "title": "JumpCat",
       "tag": "Plugin de Minecraft",

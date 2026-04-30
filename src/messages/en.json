@@ -14,6 +14,22 @@
     "codeLabel": "Code Highlights"
   },
   "Projects": {
+    "chatProject": {
+      "title": "Chat Project",
+      "tag": "Full-Stack Web App",
+      "shortDescription": "A real-time team communication platform with text, audio, and video channels, role-based access control, and file sharing.",
+      "description": "A full-stack real-time communication platform built as a Web Development final project. Supports hierarchical server and channel management with granular role-based permissions, direct messaging, file attachments, and live audio/video calls — all in a responsive dark/light interface.",
+      "features": [
+        "User authentication and session management via Clerk",
+        "Server creation with invite links and member role management (Admin, Moderator, Guest)",
+        "Text, audio, and video channels with real-time messaging powered by LiveKit",
+        "Direct messaging and direct video calls between members",
+        "File and image attachments via UploadThing",
+        "Message editing and deletion with live updates",
+        "Infinite scroll with cursor-based pagination for message history",
+        "Fully responsive UI with dark and light mode support"
+      ]
+    },
     "jumpCat": {
       "title": "JumpCat",
       "tag": "Minecraft Plugin",
