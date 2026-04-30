@@ -11,21 +11,24 @@
     "featuresLabel": "Key Features",
     "techStackLabel": "Tech Stack",
     "viewOnGitHub": "View on GitHub",
-    "codeLabel": "Code Highlights"
+    "codeLabel": "Code Highlights",
+    "screenshotsLabel": "Screenshots",
+    "liveDemo": "Live Demo"
   },
   "Projects": {
     "chatProject": {
       "title": "Chat Project",
       "tag": "Full-Stack Web App",
-      "shortDescription": "A real-time team communication platform with text, audio, and video channels, role-based access control, and file sharing.",
-      "description": "A full-stack real-time communication platform built as a Web Development final project. Supports hierarchical server and channel management with granular role-based permissions, direct messaging, file attachments, and live audio/video calls — all in a responsive dark/light interface.",
+      "shortDescription": "A self-hostable, real-time communication platform — a customizable alternative to Discord and Slack with text, audio, video, and screen-sharing channels.",
+      "description": "A full-stack real-time communication platform designed as a customizable, self-hostable alternative to Discord and Slack for teams and communities. Built with hierarchical server and channel management, granular role-based permissions, live audio, video, and screen-sharing via LiveKit, and a full admin dashboard for user moderation.",
       "features": [
-        "User authentication and session management via Clerk",
-        "Server creation with invite links and member role management (Admin, Moderator, Guest)",
-        "Text, audio, and video channels with real-time messaging powered by LiveKit",
-        "Direct messaging and direct video calls between members",
+        "Designed as a self-hostable alternative to Discord and Slack — fully customizable for any team or community",
+        "Server creation with invite links and role-based member management (Admin, Moderator, Guest)",
+        "Text, audio, video, and screen-sharing channels powered by LiveKit",
+        "Direct messaging and one-on-one video calls between members",
+        "Admin dashboard with full user oversight — view any user's message history, suspend or reactivate accounts",
         "File and image attachments via UploadThing",
-        "Message editing and deletion with live updates",
+        "Message editing and deletion with real-time updates across all connected clients",
         "Infinite scroll with cursor-based pagination for message history",
         "Fully responsive UI with dark and light mode support"
       ]

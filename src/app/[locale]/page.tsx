@@ -15,6 +15,8 @@ type ModalProject = {
   github: string;
   techStack: string[];
   hasGames?: boolean;
+  liveUrl?: string;
+  screenshots?: string[];
   codeSnippets?: Array<{ title: string; code: string }>;
 };
 type Project = LinkProject | ModalProject;
@@ -24,7 +26,9 @@ const projects: Project[] = [
     type: 'modal',
     key: 'chatProject',
     github: 'https://github.com/dahiiv2/Chat-Project',
-    techStack: ['Next.js 15', 'React', 'TypeScript', 'Tailwind CSS', 'MySQL', 'Prisma', 'Clerk', 'UploadThing', 'LiveKit'],
+    liveUrl: 'https://chat.dahii.es',
+    techStack: ['Next.js 16', 'React', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Prisma', 'Clerk', 'UploadThing', 'LiveKit'],
+    screenshots: ['/layout.png', '/admindashboard.png'],
   },
   {
     type: 'modal',
@@ -221,6 +225,8 @@ export default function Home() {
                       games={p.hasGames ? (tProj.raw(`${p.key}.games`) as Array<{ name: string; description: string }>) : []}
                       techStack={p.techStack}
                       github={p.github}
+                      liveUrl={p.liveUrl}
+                      screenshots={p.screenshots}
                       codeSnippets={p.codeSnippets}
                     />
                   )}
