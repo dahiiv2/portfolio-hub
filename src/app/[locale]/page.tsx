@@ -44,13 +44,13 @@ const projects: Project[] = [
     hasGames: true,
     codeSnippets: [
       {
-        title: 'Arena boundary detection & team elimination — BattleBoxRuntime.java',
+        title: 'Arena boundary detection & team elimination (BattleBoxRuntime.java)',
         code: `public boolean inArena(Location loc) {
     double minX = Math.min(arena.pos1.getX(), arena.pos2.getX());
     double maxX = Math.max(arena.pos1.getX(), arena.pos2.getX());
     double minZ = Math.min(arena.pos1.getZ(), arena.pos2.getZ());
     double maxZ = Math.max(arena.pos1.getZ(), arena.pos2.getZ());
-    // Y bounds ignored — avoids false negatives above floor level
+    // Y bounds ignored, avoids false negatives above floor level
     return x >= minX && x <= maxX && z >= minZ && z <= maxZ;
 }
 
@@ -62,7 +62,7 @@ public boolean teamEliminated(char team) {
 }`,
       },
       {
-        title: 'Paginated leaderboard GUI with player heads — LeaderboardCommand.java',
+        title: 'Paginated leaderboard GUI with player heads (LeaderboardCommand.java)',
         code: `public void openPage(Player p, int page) {
     List<Map.Entry<UUID,Integer>> rows =
         new ArrayList<>(plugin.getPointsService().top(1000).entrySet());
@@ -99,7 +99,7 @@ export default function Home() {
         <section className="min-h-screen flex items-center px-6 md:px-12 lg:px-20 py-24">
           <div className="max-w-5xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
 
-            {/* Photo — left on desktop, below text on mobile */}
+            {/* Photo: left on desktop, below text on mobile */}
             <motion.div
               className="relative order-2 md:order-1 rotate-[-1.5deg]"
               initial={{ opacity: 0, x: -16 }}
@@ -114,7 +114,7 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Text — right on desktop, top on mobile */}
+            {/* Text: right on desktop, top on mobile */}
             <div className="order-1 md:order-2 flex flex-col">
               <motion.p
                 className="text-[11px] uppercase tracking-[0.3em] text-amber-700 font-semibold mb-6 flex items-center gap-2"

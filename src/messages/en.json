@@ -3,7 +3,7 @@
     "title": "Daniel Mellera",
     "role": "Full-Stack Developer",
     "currently": "Junior Developer at EnergyGest España",
-    "subtitle": "Full-stack developer with production experience in PHP, MySQL, React, and Vue. Trilingual — EN · IT · ES.",
+    "subtitle": "Full-stack developer with production experience in PHP, MySQL, React, and Vue. Trilingual: EN · IT · ES.",
     "languages": "EN · IT · ES",
     "projectsTitle": "Projects",
     "footerText": "© {year} Dahii.es. All Rights Reserved."
@@ -21,13 +21,13 @@
     "psim": {
       "title": "psim",
       "tag": "Python · Battle Assistant",
-      "shortDescription": "A real-time Pokemon Showdown battle assistant — live damage calculations, opponent tracking, and a teambuilder, all from the terminal.",
-      "description": "A terminal-based Pokemon Showdown battle assistant that connects directly to PS via WebSocket and overlays live information during a battle. Damage calculations run through a Python-to-Node.js bridge that calls @smogon/calc — the same engine used by the official Smogon damage calculator. Built for competitive formats including Random Battles, VGC, and BSS.",
+      "shortDescription": "A real-time Pokemon Showdown battle assistant with live damage calculations, opponent tracking, and a teambuilder, all from the terminal.",
+      "description": "A terminal-based Pokemon Showdown battle assistant that connects directly to PS via WebSocket and overlays live information during a battle. Damage calculations run through a Python-to-Node.js bridge that calls @smogon/calc, the same engine used by the official Smogon damage calculator. Built for competitive formats including Random Battles, VGC, and BSS.",
       "features": [
         "WebSocket client that connects to Pokemon Showdown and parses the PS protocol in real time",
         "Cross-language damage calculation: Python spawns Node.js to run @smogon/calc, reverse-engineering EVs from PS-reported stats",
         "Live HUD overlay showing damage ranges colour-coded by KO threat (OHKO, 2HKO, neutral)",
-        "Battle state tracker for field conditions — weather, terrain, Tailwind, screens, Tera type, and stat boosts",
+        "Battle state tracker for field conditions: weather, terrain, Tailwind, screens, Tera type, and stat boosts",
         "Opponent tracker logging seen moves, items, abilities, HP percentages, and status across turns",
         "Teambuilder with full Smogon dex lookup for species, moves, items, and abilities",
         "Player stats fetching from the PS public API (Elo, GXE, W/L)",
@@ -37,14 +37,14 @@
     "chatProject": {
       "title": "Chat Project",
       "tag": "Full-Stack Web App",
-      "shortDescription": "A self-hostable, real-time communication platform — a customizable alternative to Discord and Slack with text, audio, video, and screen-sharing channels.",
+      "shortDescription": "A self-hostable, real-time communication platform: a customizable alternative to Discord and Slack with text, audio, video, and screen-sharing channels.",
       "description": "A full-stack real-time communication platform designed as a customizable, self-hostable alternative to Discord and Slack for teams and communities. Built with hierarchical server and channel management, granular role-based permissions, live audio, video, and screen-sharing via LiveKit, and a full admin dashboard for user moderation.",
       "features": [
-        "Designed as a self-hostable alternative to Discord and Slack — fully customizable for any team or community",
+        "Designed as a self-hostable alternative to Discord and Slack, fully customizable for any team or community",
         "Server creation with invite links and role-based member management (Admin, Moderator, Guest)",
         "Text, audio, video, and screen-sharing channels powered by LiveKit",
         "Direct messaging and one-on-one video calls between members",
-        "Admin dashboard with full user oversight — view any user's message history, suspend or reactivate accounts",
+        "Admin dashboard with full user oversight: view any user's message history, suspend or reactivate accounts",
         "File and image attachments via UploadThing",
         "Message editing and deletion with real-time updates across all connected clients",
         "Infinite scroll with cursor-based pagination for message history",
@@ -54,8 +54,8 @@
     "jumpCat": {
       "title": "JumpCat",
       "tag": "Minecraft Plugin",
-      "shortDescription": "A self-contained Paper API plugin with four competitive minigames, team management, and persistent stats — zero external dependencies.",
-      "description": "A comprehensive Minecraft minigames plugin built on Paper API 1.21, designed to run as a single self-contained plugin. No external database or addon dependencies — everything needed for a competitive multiplayer server in one package.",
+      "shortDescription": "A self-contained Paper API plugin with four competitive minigames, team management, and persistent stats. Zero external dependencies.",
+      "description": "A comprehensive Minecraft minigames plugin built on Paper API 1.21, designed to run as a single self-contained plugin. No external database or addon dependencies. Everything needed for a competitive multiplayer server in one package.",
       "features": [
         "Twelve color-coded teams with friendly-fire disabled and team-chat toggle",
         "Persistent points economy with paginated leaderboards and per-player tracking",

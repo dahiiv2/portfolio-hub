@@ -3,7 +3,7 @@
     "title": "Daniel Mellera",
     "role": "Desarrollador Full-Stack",
     "currently": "Junior Developer en EnergyGest España",
-    "subtitle": "Desarrollador full-stack con experiencia en producción en PHP, MySQL, React y Vue. Trilingüe — EN · IT · ES.",
+    "subtitle": "Desarrollador full-stack con experiencia en producción en PHP, MySQL, React y Vue. Trilingüe: EN · IT · ES.",
     "languages": "EN · IT · ES",
     "projectsTitle": "Proyectos",
     "footerText": "© {year} Dahii.es. Todos los derechos reservados."
@@ -21,13 +21,13 @@
     "psim": {
       "title": "psim",
       "tag": "Python · Asistente de Batalla",
-      "shortDescription": "Un asistente de batalla para Pokemon Showdown en tiempo real — cálculos de daño en vivo, seguimiento del rival y creador de equipos, todo desde la terminal.",
-      "description": "Un asistente de batalla para Pokemon Showdown basado en terminal que se conecta directamente a PS via WebSocket y muestra información en vivo durante la partida. Los cálculos de daño funcionan mediante un puente Python-Node.js que llama a @smogon/calc — el mismo motor del calculador oficial de Smogon. Diseñado para formatos competitivos como Random Battles, VGC y BSS.",
+      "shortDescription": "Un asistente de batalla para Pokemon Showdown en tiempo real con cálculos de daño en vivo, seguimiento del rival y creador de equipos, todo desde la terminal.",
+      "description": "Un asistente de batalla para Pokemon Showdown basado en terminal que se conecta directamente a PS via WebSocket y muestra información en vivo durante la partida. Los cálculos de daño funcionan mediante un puente Python-Node.js que llama a @smogon/calc, el mismo motor del calculador oficial de Smogon. Diseñado para formatos competitivos como Random Battles, VGC y BSS.",
       "features": [
         "Cliente WebSocket que se conecta a Pokemon Showdown y parsea el protocolo PS en tiempo real",
         "Cálculo de daño entre lenguajes: Python lanza Node.js para ejecutar @smogon/calc, calculando EVs a partir de las estadísticas reportadas por PS",
         "HUD en vivo con rangos de daño codificados por color según amenaza de KO (OHKO, 2HKO, neutral)",
-        "Rastreador de estado de campo — tiempo, terreno, Tailwind, pantallas, tipo Tera y cambios de estadísticas",
+        "Rastreador de estado de campo: tiempo, terreno, Tailwind, pantallas, tipo Tera y cambios de estadísticas",
         "Rastreador del rival que registra movimientos vistos, objetos, habilidades, porcentajes de HP y estados a lo largo de los turnos",
         "Creador de equipos con búsqueda completa en el dex de Smogon para especies, movimientos, objetos y habilidades",
         "Obtención de estadísticas del jugador desde la API pública de PS (Elo, GXE, victorias/derrotas)",
@@ -37,14 +37,14 @@
     "chatProject": {
       "title": "Chat Project",
       "tag": "Aplicación Web Full-Stack",
-      "shortDescription": "Una plataforma de comunicación en tiempo real autoalojable — alternativa personalizable a Discord y Slack con canales de texto, audio, vídeo y compartición de pantalla.",
+      "shortDescription": "Una plataforma de comunicación en tiempo real autoalojable: alternativa personalizable a Discord y Slack con canales de texto, audio, vídeo y compartición de pantalla.",
       "description": "Una plataforma de comunicación en tiempo real full-stack diseñada como alternativa autoalojable y personalizable a Discord y Slack para equipos y comunidades. Construida con gestión jerárquica de servidores y canales, permisos por roles, audio, vídeo y compartición de pantalla en vivo mediante LiveKit, y un panel de administración completo para la moderación de usuarios.",
       "features": [
-        "Diseñada como alternativa autoalojable a Discord y Slack — totalmente personalizable para cualquier equipo o comunidad",
+        "Diseñada como alternativa autoalojable a Discord y Slack, totalmente personalizable para cualquier equipo o comunidad",
         "Creación de servidores con enlaces de invitación y gestión de roles (Admin, Moderador, Invitado)",
         "Canales de texto, audio, vídeo y compartición de pantalla mediante LiveKit",
         "Mensajería directa y videollamadas individuales entre miembros",
-        "Panel de administración con control total de usuarios — ver historial de mensajes, suspender o reactivar cuentas",
+        "Panel de administración con control total de usuarios: ver historial de mensajes, suspender o reactivar cuentas",
         "Adjuntos de archivos e imágenes mediante UploadThing",
         "Edición y eliminación de mensajes con actualizaciones en tiempo real en todos los clientes conectados",
         "Scroll infinito con paginación por cursor para el historial de mensajes",
@@ -54,8 +54,8 @@
     "jumpCat": {
       "title": "JumpCat",
       "tag": "Plugin de Minecraft",
-      "shortDescription": "Un plugin para Paper API completamente autónomo con cuatro minijuegos competitivos, gestión de equipos y estadísticas persistentes — sin dependencias externas.",
-      "description": "Un completo plugin de minijuegos para Minecraft construido sobre Paper API 1.21, diseñado para funcionar como un único plugin autónomo. Sin bases de datos externas ni addons — todo lo necesario para un servidor multijugador competitivo en un solo paquete.",
+      "shortDescription": "Un plugin para Paper API completamente autónomo con cuatro minijuegos competitivos, gestión de equipos y estadísticas persistentes. Sin dependencias externas.",
+      "description": "Un completo plugin de minijuegos para Minecraft construido sobre Paper API 1.21, diseñado para funcionar como un único plugin autónomo. Sin bases de datos externas ni addons. Todo lo necesario para un servidor multijugador competitivo en un solo paquete.",
       "features": [
         "Doce equipos con código de colores, fuego amigo desactivado y chat de equipo opcional",
         "Economía de puntos persistente con clasificaciones paginadas y seguimiento por jugador",
